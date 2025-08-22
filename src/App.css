@@ -1,0 +1,8 @@
+.app {
+  padding-bottom: 1rem;
+}
+
+.no-select {
+  user-select: none;
+  -webkit-user-drag: none;
+}

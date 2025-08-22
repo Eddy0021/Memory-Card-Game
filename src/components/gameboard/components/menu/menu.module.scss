@@ -1,0 +1,120 @@
+.startScreen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 14.063rem);
+  font-family: 'Poppins', sans-serif;
+  color: black;
+}
+
+.container {
+  text-align: center;
+  padding: 2rem;
+  background: #2F2F2F;
+  border-radius: 0.938rem;
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, 0.3);
+  width: 20rem;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.username {
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+
+  &:hover {
+    color: darkgray;
+  }
+}
+
+.greeting {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.nameInput {
+  background: lightgray;
+  border: 0.063rem solid #444;
+  border-radius: 0.5rem;
+  color: black;
+  font-size: 1.1rem;
+  width: 7.813rem;
+  display: flex;
+  justify-items: flex-start;
+}
+
+.buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.startButton {
+  font-size: 2rem;
+  color: #6495ed;
+  cursor: pointer;
+  transition: transform 0.3s, color 0.3s;
+
+  &:hover {
+    transform: scale(1.1);
+    color: #4f7ccf;
+  }
+}
+
+.scoreBoard {
+  background: #424242;
+  padding: 1rem;
+  border-radius: 0.625rem;
+  margin-top: 1rem;
+  width: 7rem;
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+
+    b {
+      color: #FFD700;
+    }
+
+    p {
+      margin: 0;
+      color: #B0B0B0;
+    }
+  }
+}
+
+h1 {
+  font-size: 1.5rem;
+  color: black;
+  margin: unset;
+}
+
+.pulsingLabel {
+  display: inline-block;
+  cursor: pointer;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

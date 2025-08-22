@@ -1,0 +1,193 @@
+.navbar {
+  .container {
+    max-width: 93.75rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 7.5rem;
+    place-self: center;
+    border-radius: 0.938rem;
+    width: 82%; 
+  }
+}
+
+.logo {
+  width: 100%;
+
+  img {
+    width: 4.5rem;
+    -webkit-user-drag: none;
+    user-drag: none; 
+  }
+}
+
+.logo-only {
+  justify-content: space-between !important;
+}
+
+.centerStats {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+}
+
+.timer {
+  font-size: 3rem;
+  font-weight: bold;
+  color: lightblue;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+
+  div {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: space-between;
+    padding: 0.4rem 1rem 0.4rem 1rem;
+  }
+
+  .label {
+    color: wheat;
+    text-transform: lowercase;
+  }
+
+  .value {
+    color: wheat;
+  }
+}
+
+.options {
+  transition: color 0.2s;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+
+  i {
+    color: '#d5d5d5';
+
+    &:hover {
+      color: #555;
+      cursor: pointer;
+    }
+  }
+}
+
+.resetButton {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #add8e6;
+  transition: color 0.2s;
+
+  &:hover {
+    color: #7facbb !important;
+  }
+}
+
+// 550px
+@media (max-width: 34.375rem) {
+  .centerStats {
+    padding-right: 1rem;
+  }
+
+  .container {
+    width: 100% !important;
+  }
+
+  .navbar {
+    padding: unset !important;
+  }
+
+  .logo {
+    padding-left: 1rem;
+  }
+
+  .options {
+    justify-content: center;
+  }
+}
+
+// Very small screens 480px - 50px
+
+@media (max-width: 30rem) and (min-width: 3.125rem) {
+  .navbar {
+    .container {
+      flex-wrap: wrap;
+      height: 12.5rem;
+    }
+  }
+
+  .logo {
+    order: 1;
+    width: 50%;
+  }
+
+  .centerStats {
+    order: 3;
+  }
+
+  .options {
+    order: 2;
+    width: 45%;
+  }
+}
+
+// Mobile 640px - 481px
+
+@media (max-width: 40rem) and (min-width: 30.063rem) {
+  .navbar {
+    .container {
+      flex-wrap: wrap;
+      height: 12.5rem;
+    }
+  }
+
+  .logo {
+    order: 1;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .centerStats {
+    order: 3;
+  }
+
+  .options {
+    width: 25%;
+    order: 2;
+  }
+}
+
+// Tablet / laptop 860px - 641px
+
+@media (max-width: 53.75rem) and (min-width: 40.063rem) {
+  .navbar {
+    .container {
+      flex-wrap: unset;
+    }
+  }
+
+  .logo {
+    order: 1;
+    width: 100%;
+    display: block;
+  }
+
+  .centerStats {
+    order: 2;
+    width: 100%;
+  }
+
+  .options {
+    order: 3;
+    width: 100%;
+  }
+}

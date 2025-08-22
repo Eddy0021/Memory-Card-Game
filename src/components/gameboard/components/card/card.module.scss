@@ -1,0 +1,131 @@
+.card {
+  perspective: 62.5rem;
+  cursor: pointer;
+  height: 17rem;
+}
+
+.cardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.card.flipped .cardInner {
+  transform: rotateY(180deg);
+}
+
+.cardFront,
+.cardBack {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  background: dimgray;
+  border-radius: 1rem;
+}
+
+.cardFront {
+  transition: transform 0.3s ease;
+
+  .cardFrontCover {
+    width: 80%;
+    height: 90%;
+    border-radius: 3.125rem;
+    align-content: center;
+    text-align: center;
+
+    span {
+      font-size: 6.25rem;
+      font-weight: 900;
+      color: honeydew;
+    }
+
+    &:hover {
+      span {
+        color: cadetblue;
+      }
+    }
+  }
+}
+
+.cardBack {
+  transform: rotateY(180deg);
+  border: 1px solid honeydew;
+
+  .cardBackCover {
+    width: 90%;
+    height: 90%;
+    align-content: center;
+    text-align: center;
+    border-radius: 1.25rem;
+    font-size: xxx-large;
+
+    i {
+      color: white;
+    }
+  }
+}
+
+.wrapper {
+  text-align: center;
+  margin-top: 1.875rem;
+}
+
+.statusBar {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  font-size: 1.2rem;
+  margin-bottom: 1.25rem;
+}
+
+@keyframes shake {
+  0% { transform: rotateY(0deg) translateX(0); }
+  25% { transform: rotateY(0deg) translateX(-0.313rem); }
+  50% { transform: rotateY(0deg) translateX(0.313rem); }
+  75% { transform: rotateY(0deg) translateX(-0.313rem); }
+  100% { transform: rotateY(0deg) translateX(0); }
+}
+
+.shake .cardInner {
+  animation: shake 0.4s ease-in-out;
+}
+
+// Very small screens 480px
+
+@media (max-width: 30rem) {
+  .cardFront {
+    .cardFrontCover {
+      height: 80%;
+      border-radius: 1.563rem;
+
+      span {
+        font-size: 4.063rem !important;
+      }
+    }
+  }
+}
+
+// tablet 640px - 481px
+
+@media (max-width: 40rem) and (min-width: 30.063rem) {
+  .cardFrontCover span{
+    font-size: 5.313rem !important;
+  }
+}
+
+// Tablet / laptop 860px
+
+@media (max-width: 53.75rem)  {
+  .card {
+    height: 13rem;
+  }
+}
